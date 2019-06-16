@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8aeaae949fd22f4ea6e5fb3167c3331, type: 3}
+  m_Name: Dalvo
+  m_EditorClassIdentifier: 
+  mainImage: {fileID: 21300000, guid: b0953d3b895e29d46bad3a8a53de6616, type: 3}
+  nameText: Dalvo
+  ageText: 50
+  raceText: Siren
+  classText: None
+  descText: 'A Siren known for his beautiful voice '

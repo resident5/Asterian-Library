@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8aeaae949fd22f4ea6e5fb3167c3331, type: 3}
+  m_Name: Doctor
+  m_EditorClassIdentifier: 
+  mainImage: {fileID: 21300000, guid: 6cd58f5701053974bbc6afabb664eded, type: 3}
+  nameText: Doctor
+  ageText: 36
+  raceText: Unknown
+  classText: Combat Medic
+  descText: 'A shapeshifter who even Demon''s Fear. Sends out perodic messages to
+    all Champions, Asterians and Demons for checkups. It is worth mentioning that
+    Doctor can somehow find anyone in Asteria even if they are in a deadzone. No one
+    knows how he is able to do this but his reputation is feared by all, including
+    Demons.
+
+
+    While his class is a combat medic, he spends less time healing and more time dismembering
+    his opponents.
+
+
+    His signature weapon are claws located on his right hand that, if allow to create
+    a cut or incision anywhere on the victim''s body, will shoot out a web of the
+    organs within a 8 inch radius around that incision. With this ability, Doctor
+    can very easily remove. expand, shrink or even create new organs and easily implant
+    them inside with minimal effort.'
