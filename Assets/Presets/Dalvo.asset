@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8aeaae949fd22f4ea6e5fb3167c3331, type: 3}
   m_Name: Dalvo
   m_EditorClassIdentifier: 
-  mainImage: {fileID: 21300000, guid: b0953d3b895e29d46bad3a8a53de6616, type: 3}
+  mainImages:
+  - {fileID: 21300000, guid: b0953d3b895e29d46bad3a8a53de6616, type: 3}
+  index: 0
   nameText: Dalvo
   ageText: 50
   raceText: Siren
   classText: None
   descText: 'A Siren known for his beautiful voice '
+  pagePath: 

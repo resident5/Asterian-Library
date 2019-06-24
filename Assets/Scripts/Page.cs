@@ -8,7 +8,10 @@ using TMPro;
 [CreateAssetMenu(fileName = "Page")]
 public class Page : ScriptableObject
 {
-    public Sprite mainImage;
+    Page page;
+    public List<Sprite> mainImages;
+
+    public int index;
 
     public string nameText;
     public string ageText;
@@ -17,6 +20,25 @@ public class Page : ScriptableObject
 
     [TextArea(2, 10)]
     public string descText;
+
+    public string pagePath;
+
+    public Page(string name, string age, string race, string clas, string desc, List<Sprite> sprites)
+    {
+        page = this;
+        nameText = name;
+        ageText = age;
+        raceText = race;
+        classText = clas;
+        descText = desc;
+        pagePath = "Assets\\Presets\\";
+    }
+
+    public void AddPageToFolder()
+    {
+        //AssetDatabase.MoveAsset("Asset\\" + page.name);
+    }
+
 }
 
 [CustomEditor(typeof(Page))]
@@ -27,9 +49,9 @@ public class PageEditor : Editor
         DrawDefaultInspector();
         Page myTarget = (Page)target;
 
-        if (myTarget.mainImage != null && string.IsNullOrEmpty(myTarget.nameText))
+        if (myTarget.mainImages != null && string.IsNullOrEmpty(myTarget.nameText))
         {
-            myTarget.nameText = myTarget.mainImage.name;
+            myTarget.nameText = myTarget.mainImages[0].name;
             myTarget.ageText = "18";
             myTarget.raceText = "Race";
             myTarget.classText = "Warrior";

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8aeaae949fd22f4ea6e5fb3167c3331, type: 3}
   m_Name: Angelo
   m_EditorClassIdentifier: 
-  mainImage: {fileID: 21300000, guid: 350d17f1558f73d41a43a2cbd9934832, type: 3}
+  mainImages:
+  - {fileID: 21300000, guid: 350d17f1558f73d41a43a2cbd9934832, type: 3}
+  index: 0
   nameText: Angelo
   ageText: 18
   raceText: Gello
@@ -23,3 +25,4 @@ MonoBehaviour:
 
     While he is seen as a sugar rush nerd, he''s very dominate in nature when it comes
     to Papa Carlo and especially hates that Carlo is in love with Pan. '
+  pagePath: 

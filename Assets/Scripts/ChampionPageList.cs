@@ -23,8 +23,10 @@ public class ChampionPageList : MonoBehaviour
     {
         if (currentPageIndex < pages.Count - 1)
         {
+            template.index = 0;
             template.currentPage = pages[++currentPageIndex];
             pageChanged();
+            template.CheckSprite();
         }
         else
         {
@@ -36,12 +38,16 @@ public class ChampionPageList : MonoBehaviour
     {
         if (currentPageIndex > 0)
         {
+            template.index = 0;
             template.currentPage = pages[--currentPageIndex];
             pageChanged();
+            template.CheckSprite();
         }
         else
         {
             Debug.Log("This is the first page");
         }
     }
+
+
 }
