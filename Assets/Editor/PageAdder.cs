@@ -48,8 +48,13 @@ public class PageAdder : EditorWindow
 
         if (GUILayout.Button("Create Page"))
         {
-            Page page = new Page(nameText, ageText, raceText, classText, descText, imageAssets);
-            AssetDatabase.CreateAsset(page, page.pagePath);
+            //Find a way to create a page scriptable object and move it to the Assets/Preset/ folder
+            
+            /*
+            Page page = new Page(nameText, ageText, raceText, classText, descText, imageAssets);  //new Page(nameText, ageText, raceText, classText, descText, imageAssets);
+            
+            AssetDatabase.CreateAsset(page, page.pagePath + page.name);
+            */
         }
 
     }
