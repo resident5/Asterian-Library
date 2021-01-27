@@ -4,26 +4,53 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEditor;
+using System;
+using TMPro;
 
+[Serializable]
 public class CharacterCard : MonoBehaviour
 {
-    Character character;
-    public string cardName;
+    public Character character;
+    public CharacterSheet sheet;
+    public CharacterPlate plate;
     public Image cardImage;
-    public string filepath;
+    public string coverImageFilePath;
+
+    public Button button;
+    public TMP_Text nameText;
+
+    private void Awake()
+    {
+        plate = transform.parent.parent.parent.GetComponent<CharacterPlate>();
+        sheet = plate.characterSheet;
+
+    }
 
     void Start()
     {
-        cardName = character.characterName;
+        nameText.text = character.characterName;
 
-        if (string.IsNullOrEmpty(filepath))
+        if (string.IsNullOrEmpty(coverImageFilePath))
         {
-            filepath = EditorUtility.OpenFilePanelWithFilters("Select Cover Image", "", new string[]{ "Image files","png","All Files", "*"});
-            Debug.Log("FilePath = " + filepath);
+            Debug.Log("FilePath = " + coverImageFilePath);
         }
-        var loadedText = Texture2dLoadPNG(filepath);
+
+        SetCoverImage();
+    }
+
+    public void ShowCharacterInfo()
+    {
+        sheet.gameObject.SetActive(true);
+        sheet.character = character;
+        sheet.SetInformation();
+    }
+
+    void SetCoverImage()
+    {
+        var loadedText = Texture2dLoadPNG(coverImageFilePath);
         var createdSprite = Sprite.Create(loadedText, new Rect(0, 0, loadedText.width, loadedText.height), Vector2.zero);
         cardImage.sprite = createdSprite;
+
     }
 
     Texture2D Texture2dLoadPNG(string filepath)
@@ -40,4 +67,5 @@ public class CharacterCard : MonoBehaviour
 
         return tex;
     }
+
 }
